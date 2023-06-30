@@ -30,4 +30,8 @@ export class ExecutionEngineDisabled implements IExecutionEngine {
   getPayloadBodiesByRange(): Promise<never> {
     throw Error("Execution engine disabled");
   }
+
+  isOffline(): Promise<boolean> {
+    throw Error("Execution engine disabled");
+  }
 }

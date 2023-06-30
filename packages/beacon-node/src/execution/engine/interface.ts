@@ -136,4 +136,6 @@ export interface IExecutionEngine {
   getPayloadBodiesByHash(blockHash: DATA[]): Promise<(ExecutionPayloadBody | null)[]>;
 
   getPayloadBodiesByRange(start: number, count: number): Promise<(ExecutionPayloadBody | null)[]>;
+
+  isOffline(): Promise<boolean>;
 }
