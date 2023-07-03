@@ -40,8 +40,8 @@ export function getNodeApi(
       // TODO: Implement disconnect count with on-disk persistence
       const data = {
         disconnected: 0,
-        connecting: 0,
-        connected: 0,
+        connecting: peer,
+        connected: peer,
         disconnecting: 0,
       };
 
@@ -77,6 +77,7 @@ export function getNodeApi(
       // else {
       //   503: Node not initialized or having issues
       //   NOTE: Lodestar does not start its API until fully initialized, so this status can never be served
+      // auto fix issues:true
       // }
     },
   };
